@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Twist Stories</title>
+<link rel="icon" href="PICS/twsit.png" type="image/x-icon">
+<link rel="stylesheet" href="proj.css">
+<link rel="stylesheet" href="proj2.css">
+</head>
+<body style="text-align: center;">
+
+<!--header-->
+<div id="header">
+    <div id="headerLeft">
+        <img src="PICS/twsit.png">
+        <p id="headerTitle">Twist Stories</p>
+    </div>
+    <button id="resetBtn" onclick="location.reload()">Refresh</button>
+</div>
+<!--story buttons-->
+<div id="storyButton">
+    <button onclick="story1()">Story 1</button>
+    <button onclick="story2()">Story 2</button>
+    <button onclick="story3()">Story 3</button>
+    <button onclick="story4()">Story 4</button>
+    <button onclick="story5()">Story 5</button>
+    <button>More Stories Soon...</button>
+</div>
+<!--main container-->
+<div id="mainContainer">
+    <!--left side-->
+    <div id="leftContainer">
+        <h2 id="leftHeader">Choose a story!</h2>
+        <hr width="100%" size="2" color="#834735">
+        <p id="filler"></p>
+        <div id="leftContent">
+            <p id="inputtedVariables">Choose one of the stories from the choices above!</p>
+        </div>
+        <img id="imageFiller" src="">
+    </div>
+    <!--right side-->
+    <div id="rightContainer">
+        <div id="rightHeaderWrapper">
+            <h2 id="rightHeader">Fill in the blanks!</h2>
+            <img id="rightImage" src="PICS/quill.png" alt="Story Icon">
+        </div>
+        <hr width="100%" size="2" color="#834735">
+        <div id="storyForm"></div>
+            <div id="actionButtons">
+                <button id="revealBtn" style="display:none;" onclick="revealStory()">Reveal Story</button>
+                <button id="resetStoryBtn" style="display:none;" onclick="resetStory()">Reset Story</button>
+            </div>
+        <p id="storyOutput">Make sure to fill in the blanks before submitting!</p>
+    </div>
+</div>
+<!--footer-->
+<div id="footer">
+    <div id="footerCenter">
+        <img src="PICS/twsit.png">
+        <p id="footerTitle">Twist Stories by Galanido, Eilisha Melle S.</p>
+    </div>
+</div>
+
+<script src="proj.js"></script>
+<script src="proj2.js"></script>
+</body>
+</html>

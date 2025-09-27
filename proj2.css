@@ -1,0 +1,61 @@
+#header {
+    transition: background-color 1.5s ease, box-shadow 1.5s ease, transform 1.5s ease;
+}
+
+#header:hover {
+    background-color: #3a8d5b; 
+    transform: translateY(-3px); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+#resetBtn {
+    transition: background-color 0.8s ease, color 0.8s ease, transform 0.8s ease;
+}
+#resetBtn:hover {
+    background-color: #1a422c;
+    color: #FEFEE3;
+    transform: scale(1.05); 
+}
+
+#storyButton button {
+    transition: background-color 0.8s ease, color 0.8s ease, transform 0.8s ease;
+}
+#storyButton button:hover {
+    background-color: #905823;
+    color: #FEFEE3;
+    transform: scale(1.05); 
+}
+
+#storyForm input {
+    transition: background-color 0.5s ease, box-shadow 0.5s ease;
+}
+#storyForm input:focus {
+    box-shadow: 0 0 8px #FFC9B9; 
+    outline: none; 
+}
+
+/* ✅ Transitions now applied on base state */
+#revealBtn,
+#resetStoryBtn {
+    transition: background-color 0.8s ease, color 0.8s ease, transform 0.8s ease;
+}
+
+#revealBtn:hover {
+    background-color: #834735;
+    color: #FFC9B9;
+    transform: scale(1.05);
+}
+
+#resetStoryBtn:hover {
+    background-color: #642b19;
+    color: #FFC9B9;
+    transform: scale(1.05);
+}
+
+#mainContainer {
+    transition: transform 1.5s ease, box-shadow 1.5s ease;
+}
+#mainContainer:hover {
+    transform: translateY(-4px); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
