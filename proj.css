@@ -244,35 +244,46 @@ body::before {
     margin: 0;
     font-size: 1rem;
 }
-/* MOBILE RESPONSIVE CENTERING */
+/* MOBILE RESPONSIVE CENTERING & SPACING */
 @media screen and (max-width: 720px) {
-    /* Center the main container */
-    #mainContainer {
-        flex-direction: column;      /* stack left & right vertically */
-        align-items: center;         /* center horizontally */
-        margin: 10px auto;
-        width: 95%;                  /* almost full width */
+    /* Header adjustments */
+    #header {
+        flex-direction: row;
+        justify-content: space-between;  /* keep title and button separated */
+        align-items: center;
+        width: 95%;
         max-width: 95%;
+        padding: 8px 15px;
+        margin: 10px auto;
     }
 
-    /* Left and right containers full width */
-    #leftContainer,
-    #rightContainer {
-        width: 95%;
-        padding: 15px;
-        font-size: 16px;
+    #headerLeft {
+        flex-direction: row;
+        align-items: center;
+        gap: 10px; /* more distance between logo and title */
+    }
+
+    #headerTitle {
+        font-size: 1rem;
+        margin-right: 20px; /* space between title and refresh button */
+    }
+
+    #resetBtn {
+        flex-shrink: 0;
+        padding: 6px 12px;
+        font-size: 0.9rem;
     }
 
     /* Center story buttons */
     #storyButton {
         display: flex;
-        flex-direction: row;         /* keep in a row */
-        justify-content: center;     /* center horizontally */
-        flex-wrap: wrap;             /* wrap to new line if needed */
+        justify-content: center;       /* center horizontally */
+        flex-wrap: nowrap;             /* keep in a row */
         gap: 8px;
         margin: 10px auto;
         width: 100%;
-        overflow-x: auto;            /* scroll if overflow */
+        overflow-x: auto;              /* scroll if too many buttons */
+        padding: 5px 0;
     }
 
     #storyButton button {
@@ -282,38 +293,35 @@ body::before {
         white-space: nowrap;
     }
 
-    /* Optional: scale headers and text */
+    /* Center main container */
+    #mainContainer {
+        flex-direction: column;
+        align-items: center;          /* center horizontally */
+        margin: 10px auto;
+        width: 95%;
+        max-width: 95%;
+    }
+
+    #leftContainer,
+    #rightContainer {
+        width: 95%;
+        padding: 15px;
+        font-size: 16px;
+    }
+
     #leftHeader,
     #rightHeader {
         font-size: 1.2rem;
+        text-align: center;           /* center headers for mobile */
     }
 
-    #header,
-    #footer {
-        width: 95%;
-        max-width: 95%;
-        padding: 8px 15px;
-        justify-content: center;
-        text-align: center;
-    }
-
-    #headerLeft {
-        justify-content: center;
-        flex-direction: row;
-        gap: 5px;
-    }
-
-    #headerTitle {
-        font-size: 1rem;
-    }
-
-    #footerCenter {
+    #rightHeaderWrapper {
         justify-content: center;
         gap: 5px;
     }
 
-    #footer img {
-        height: 20px;
+    #rightImage {
+        height: 28px;
     }
 
     /* Story form inputs full width */
@@ -324,5 +332,23 @@ body::before {
     #revealBtn,
     #resetStoryBtn {
         width: 100%;
+    }
+
+    /* Footer adjustments */
+    #footer {
+        width: 95%;
+        max-width: 95%;
+        padding: 6px 15px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    #footerCenter {
+        justify-content: center;
+        gap: 5px;
+    }
+
+    #footer img {
+        height: 20px;
     }
 }
