@@ -290,6 +290,7 @@ body::before {
         width: 95%;
         margin: 10px auto;
         padding: 5px 0;
+        padding-left: 75px;
     }
 
     #storyButton button {
@@ -309,7 +310,7 @@ body::before {
         margin: 10px auto;
         max-width: 95%;
         border-radius: 10px;
-        transform: translateX(10px); /* move container slightly right */
+        transform: translateX(1px); /* move container slightly right */
     }
 
     #leftContainer,
