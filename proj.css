@@ -244,13 +244,13 @@ body::before {
     margin: 0;
     font-size: 1rem;
 }
-/* MOBILE RESPONSIVE CENTERED FIX */
+/* MOBILE FIX: 720x1280 */
 @media screen and (max-width: 720px) {
-    /* Ensure main body stacks correctly */
-    body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+
+    /* Fix body background overlay so buttons are clickable */
+    body::before {
+        pointer-events: none; /* allows clicks on content */
+        z-index: -1;          /* ensure it's behind everything */
     }
 
     /* Header */
@@ -280,11 +280,10 @@ body::before {
         font-size: 0.9rem;
     }
 
-    /* Story buttons: horizontal scrollable row, centered */
+    /* Story buttons: centered row, scrollable */
     #storyButton {
         display: flex;
         justify-content: center;
-        align-items: center;
         flex-wrap: nowrap;
         overflow-x: auto;
         gap: 8px;
@@ -298,10 +297,10 @@ body::before {
         font-size: 0.95rem;
         padding: 8px 12px;
         white-space: nowrap;
-        cursor: pointer;  /* ensure clickable */
+        cursor: pointer;
     }
 
-    /* Main container centered and stacked */
+    /* Main container: slightly shifted to right */
     #mainContainer {
         display: flex;
         flex-direction: column;
@@ -310,6 +309,7 @@ body::before {
         margin: 10px auto;
         max-width: 95%;
         border-radius: 10px;
+        transform: translateX(10px); /* move container slightly right */
     }
 
     #leftContainer,
@@ -317,7 +317,7 @@ body::before {
         width: 100%;
         padding: 15px;
         font-size: 16px;
-        box-sizing: border-box;  /* ensure padding doesn’t overflow */
+        box-sizing: border-box;
     }
 
     #leftHeader,
@@ -367,10 +367,5 @@ body::before {
 
     #footer img {
         height: 20px;
-    }
-
-    /* Fix background overlay issue */
-    body::before {
-        pointer-events: none; /* ensures buttons are clickable */
     }
 }
