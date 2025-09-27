@@ -244,12 +244,19 @@ body::before {
     margin: 0;
     font-size: 1rem;
 }
-/* MOBILE RESPONSIVE CENTERING & SPACING */
+/* MOBILE RESPONSIVE CENTERED FIX */
 @media screen and (max-width: 720px) {
-    /* Header adjustments */
+    /* Ensure main body stacks correctly */
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Header */
     #header {
-        flex-direction: row;
-        justify-content: space-between;  /* keep title and button separated */
+        display: flex;
+        justify-content: space-between;
         align-items: center;
         width: 95%;
         max-width: 95%;
@@ -258,31 +265,31 @@ body::before {
     }
 
     #headerLeft {
-        flex-direction: row;
+        display: flex;
         align-items: center;
-        gap: 10px; /* more distance between logo and title */
+        gap: 10px;
     }
 
     #headerTitle {
         font-size: 1rem;
-        margin-right: 20px; /* space between title and refresh button */
+        margin: 0;
     }
 
     #resetBtn {
-        flex-shrink: 0;
         padding: 6px 12px;
         font-size: 0.9rem;
     }
 
-    /* Center story buttons */
+    /* Story buttons: horizontal scrollable row, centered */
     #storyButton {
         display: flex;
-        justify-content: center;       /* center horizontally */
-        flex-wrap: nowrap;             /* keep in a row */
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        overflow-x: auto;
         gap: 8px;
+        width: 95%;
         margin: 10px auto;
-        width: 100%;
-        overflow-x: auto;              /* scroll if too many buttons */
         padding: 5px 0;
     }
 
@@ -291,32 +298,38 @@ body::before {
         font-size: 0.95rem;
         padding: 8px 12px;
         white-space: nowrap;
+        cursor: pointer;  /* ensure clickable */
     }
 
-    /* Center main container */
+    /* Main container centered and stacked */
     #mainContainer {
+        display: flex;
         flex-direction: column;
-        align-items: center;          /* center horizontally */
-        margin: 10px auto;
+        align-items: center;
         width: 95%;
+        margin: 10px auto;
         max-width: 95%;
+        border-radius: 10px;
     }
 
     #leftContainer,
     #rightContainer {
-        width: 95%;
+        width: 100%;
         padding: 15px;
         font-size: 16px;
+        box-sizing: border-box;  /* ensure padding doesn’t overflow */
     }
 
     #leftHeader,
     #rightHeader {
         font-size: 1.2rem;
-        text-align: center;           /* center headers for mobile */
+        text-align: center;
     }
 
     #rightHeaderWrapper {
+        display: flex;
         justify-content: center;
+        align-items: center;
         gap: 5px;
     }
 
@@ -324,7 +337,7 @@ body::before {
         height: 28px;
     }
 
-    /* Story form inputs full width */
+    /* Form inputs full width */
     #storyForm input {
         width: 100%;
     }
@@ -334,21 +347,30 @@ body::before {
         width: 100%;
     }
 
-    /* Footer adjustments */
+    /* Footer */
     #footer {
         width: 95%;
         max-width: 95%;
         padding: 6px 15px;
+        display: flex;
         justify-content: center;
+        align-items: center;
         text-align: center;
     }
 
     #footerCenter {
+        display: flex;
         justify-content: center;
+        align-items: center;
         gap: 5px;
     }
 
     #footer img {
         height: 20px;
+    }
+
+    /* Fix background overlay issue */
+    body::before {
+        pointer-events: none; /* ensures buttons are clickable */
     }
 }
