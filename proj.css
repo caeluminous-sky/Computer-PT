@@ -1,3 +1,6 @@
+/* ==========================
+   FONTS
+========================== */
 @font-face {
     font-family: Queensides;
     src: url(Queensides-3z7Ey.ttf);
@@ -11,6 +14,9 @@
     src: url(QueensidesMedium-x30zV.ttf);
 }
 
+/* ==========================
+   BODY
+========================== */
 body {
     margin: 0;
     background-color: #fffef7;
@@ -43,17 +49,21 @@ body::before {
     z-index: -1;
 }
 
+/* Animation for body background */
 @keyframes movePattern {
     from { transform: translate(0, 0); }
     to   { transform: translate(-160px, -160px); }
 }
 
+/* ==========================
+   HEADER
+========================== */
 #header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 95vw;       /* increased width */
-    max-width: 190vh; /* wider max width */
+    width: 95vw;
+    max-width: 190vh;
     margin: 20px auto;
     background-color: #2C6E49; 
     color: #FEFEE3;
@@ -90,6 +100,9 @@ body::before {
     cursor: pointer;
 }
 
+/* ==========================
+   STORY BUTTONS
+========================== */
 #storyButton button {
     font-family: QueensidesMedium;
     font-size: 1.2rem;
@@ -100,6 +113,9 @@ body::before {
     border: none;
 }
 
+/* ==========================
+   MAIN CONTAINER
+========================== */
 #mainContainer {
     display: flex;
     justify-content: space-between;
@@ -113,12 +129,16 @@ body::before {
     flex: 1;
 }
 
+/* ==========================
+   LEFT CONTAINER
+========================== */
 #leftHeader {
     margin: 0;
     text-align: center;
     padding-top: 2.5px; 
     font-size: 1.5rem;
 }
+
 #leftContainer {
     flex: 1;
     background-color: #FFC9B9;
@@ -126,9 +146,14 @@ body::before {
     padding: 20px;
     font-size: 24px;
 }
+
 #leftContent {
     text-align: left;
 }
+
+/* ==========================
+   RIGHT CONTAINER
+========================== */
 #rightContainer {
     flex: 2;
     background-color: #FEFEE3;
@@ -137,42 +162,7 @@ body::before {
     text-align: left;
     font-size: 24px;
 }
-#storyForm {
-    margin: 10px 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-#storyForm input {
-    display: block;
-    width: 90%;
-    padding: 8px;
-    border: 1px solid #834735;
-    border-radius: 5px;
-    text-align: left;
-    margin: 5px 0;
-    font-family: QueensidesMedium;
-    color: #834735;
-    background-color: #FEFEE3;
-}
 
-#revealBtn {
-    margin-top: 15px;
-    padding: 10px 15px;
-    background-color: #FFC9B9;
-    color: #834735;    
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-family: QueensidesMedium;
-}
-
-.storyIcon {
-    display: block;
-    margin-top: 10px;
-    height: 60px;
-    width: auto;
-}
 #rightHeaderWrapper {
     display: flex;
     align-items: center;
@@ -189,12 +179,28 @@ body::before {
     height: 35px;       
     width: auto;
 }
-#actionButtons {
-    margin-top: 15px;
+
+#storyForm {
+    margin: 10px 0;
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
 }
 
+#storyForm input {
+    display: block;
+    width: 90%;
+    padding: 8px;
+    border: 1px solid #834735;
+    border-radius: 5px;
+    text-align: left;
+    margin: 5px 0;
+    font-family: QueensidesMedium;
+    color: #834735;
+    background-color: #FEFEE3;
+}
+
+#revealBtn,
 #resetStoryBtn {
     margin-top: 15px;
     padding: 10px 15px;
@@ -205,21 +211,38 @@ body::before {
     cursor: pointer;
     font-family: QueensidesMedium;
 }
+
+.storyIcon {
+    display: block;
+    margin-top: 10px;
+    height: 60px;
+    width: auto;
+}
+
+#actionButtons {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
 #storyOutput {
     margin-top: 0px;
 }
+
 #imageFiller {
     height: 75px;
     border-radius: 18px;
 }
 
-/* Footer */
+/* ==========================
+   FOOTER
+========================== */
 #footer {
     display: flex;                 
     justify-content: center;       
     align-items: center;           
-    width: 95vw;       /* increased width */
-    max-width: 190vh; /* wider max width */
+    width: 95vw;
+    max-width: 190vh;
     margin: 20px auto;
     background-color: #2C6E49; 
     color: #FEFEE3;
@@ -230,16 +253,19 @@ body::before {
     height: 20px;
     flex-shrink: 0;
 }
+
 #footerCenter {
     display: flex;
     align-items: center;
     gap: 10px;
     justify-content: center; 
 }
+
 #footer img {
     height: 24px;
     width: auto;
 }
+
 #footerTitle {
     margin: 0;
     font-size: 1rem;
