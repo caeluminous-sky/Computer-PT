@@ -34,7 +34,7 @@ function revealStory() {
         let place = document.getElementById("place").value;
         let randomObject = document.getElementById("randomObject").value;
 
-        storyText = `Today, my teacher ${name} walked into class wearing a ${clothing} made of ${objectsPlural}. Instead of teaching math, they climbed onto a ${desk} and started ${verbIng} in front of everyone. The projector suddenly turned on, showing ${celebrity} dancing with a ${weirdObject}. Students tried to take notes, but their pens started turning into ${foodPlural} one by one. Even the class pet, ${animal}, joined in by ${verbIng2} across the whiteboard. At that point, everyone shouted, “${phrase}!” and ran out of the ${place}. By the time the bell rang, the teacher was still standing on the desk, holding up a giant ${randomObject} like it was a trophy.`;
+        storyText = `Today, my teacher ${name} walked into class wearing a ${clothing} made of ${objectsPlural}. Instead of teaching math, they climbed onto a ${desk} and started ${verbIng} in front of everyone. The projector suddenly turned on, showing ${celebrity} dancing with a ${weirdObject}. Students tried to take notes, but their pens started turning into ${foodPlural} one by one. Even the class pet, ${animal}, joined in by ${verbIng2} across the whiteboard. At that point, everyone shouted, “${phrase}!” and ran out of the ${place}. By the time the bell rang, the teacher was still standing on the ${desk}, holding up a giant ${randomObject} like it was a trophy.`;
 
         leftContent = `Name: ${name}<br>
         Clothing Item: ${clothing}<br>
