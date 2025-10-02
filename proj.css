@@ -1,6 +1,3 @@
-/* ==========================
-   FONTS
-========================== */
 @font-face {
     font-family: Queensides;
     src: url(Queensides-3z7Ey.ttf);
@@ -13,10 +10,6 @@
     font-family: QueensidesMedium;
     src: url(QueensidesMedium-x30zV.ttf);
 }
-
-/* ==========================
-   BODY
-========================== */
 body {
     margin: 0;
     background-color: #fffef7;
@@ -25,39 +18,8 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    background-image: url('PICS/bg.png');
 }
-
-/* Background container for shapes */
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 200%;
-    height: 200%;
-    background-image: 
-        radial-gradient(circle 18px, #ff6b6b 80%, transparent 100%), 
-        radial-gradient(circle 12px, #4ecdc4 80%, transparent 100%),
-        radial-gradient(circle 8px, #ffe66d 80%, transparent 100%),  
-        linear-gradient(45deg, transparent 48%, #ff6b6b 48%, #ff6b6b 52%, transparent 52%), 
-        linear-gradient(-45deg, transparent 48%, #1a535c 48%, #1a535c 52%, transparent 52%), 
-        linear-gradient(135deg, transparent 45%, #ff9f1c 45%, #ff9f1c 55%, transparent 55%), 
-        repeating-linear-gradient(90deg, transparent, transparent 18px, #6c5ce7 18px, #6c5ce7 20px);
-    background-size: 160px 160px;
-    opacity: 0.25;
-    animation: movePattern 40s linear infinite;
-    z-index: -1;
-}
-
-/* Animation for body background */
-@keyframes movePattern {
-    from { transform: translate(0, 0); }
-    to   { transform: translate(-160px, -160px); }
-}
-
-/* ==========================
-   HEADER
-========================== */
 #header {
     display: flex;
     justify-content: space-between;
@@ -72,7 +34,6 @@ body::before {
     border: 2px solid #1a422c; 
     flex-shrink: 0;
 }
-
 #headerLeft {
     display: flex;
     align-items: center;
@@ -100,9 +61,7 @@ body::before {
     cursor: pointer;
 }
 
-/* ==========================
-   STORY BUTTONS
-========================== */
+
 #storyButton button {
     font-family: QueensidesMedium;
     font-size: 1.2rem;
@@ -113,9 +72,7 @@ body::before {
     border: none;
 }
 
-/* ==========================
-   MAIN CONTAINER
-========================== */
+
 #mainContainer {
     display: flex;
     justify-content: space-between;
@@ -129,9 +86,7 @@ body::before {
     flex: 1;
 }
 
-/* ==========================
-   LEFT CONTAINER
-========================== */
+
 #leftHeader {
     margin: 0;
     text-align: center;
@@ -151,9 +106,7 @@ body::before {
     text-align: left;
 }
 
-/* ==========================
-   RIGHT CONTAINER
-========================== */
+
 #rightContainer {
     flex: 2;
     background-color: #FEFEE3;
@@ -234,9 +187,6 @@ body::before {
     border-radius: 18px;
 }
 
-/* ==========================
-   FOOTER
-========================== */
 #footer {
     display: flex;                 
     justify-content: center;       
