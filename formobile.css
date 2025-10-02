@@ -1,78 +1,35 @@
-/* ==========================
-   MOBILE MEDIA QUERY — SIDE-BY-SIDE WITH VISIBLE ANIMATION
-========================== */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     html, body {
         margin: 0;
         padding: 0;
-        width: 100%;
         overflow-x: hidden;
-        background-color: transparent; /* let animation show through */
-        box-sizing: border-box;
+        background-color: transparent;
     }
 
-    body::before {
-        content: "";
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 200%;
-        height: 200%;
-        background-image: 
-            radial-gradient(circle 18px, #ff6b6b 80%, transparent 100%), 
-            radial-gradient(circle 12px, #4ecdc4 80%, transparent 100%),
-            radial-gradient(circle 8px, #ffe66d 80%, transparent 100%),  
-            linear-gradient(45deg, transparent 48%, #ff6b6b 48%, #ff6b6b 52%, transparent 52%), 
-            linear-gradient(-45deg, transparent 48%, #1a535c 48%, #1a535c 52%, transparent 52%), 
-            linear-gradient(135deg, transparent 45%, #ff9f1c 45%, #ff9f1c 55%, transparent 55%), 
-            repeating-linear-gradient(90deg, transparent, transparent 18px, #6c5ce7 18px, #6c5ce7 20px);
-        background-size: 160px 160px;
-        opacity: 0.25;
-        animation: movePattern 40s linear infinite;
-        z-index: -1;
-    }
-
-    @keyframes movePattern {
-        from { transform: translate(0, 0); }
-        to   { transform: translate(-160px, -160px); }
-    }
-
-    /* HEADER */
     #header {
         width: 95%;
         margin: 8px auto;
         padding: 8px;
         border-radius: 10px;
         font-size: 1rem;
-        background-color: rgba(44,110,73,0.95); /* slightly transparent */
+        background-color: rgba(44,110,73,0.95); 
         color: #FEFEE3;
-        box-sizing: border-box;
-        z-index: 1;
-        position: relative;
     }
 
-    /* MAIN CONTAINER: side by side */
     #mainContainer {
-        flex-direction: row;
         width: 95%;
         margin: 8px auto;
         padding: 0;
         display: flex;
         gap: 0;
-        background-color: transparent;
-        box-sizing: border-box;
-        position: relative;
-        z-index: 1;
     }
 
-    /* LEFT & RIGHT CONTAINERS */
     #leftContainer {
         flex: 1;
         padding: 8px;
         font-size: 0.9rem;
         background-color: #FFC9B9;
         border-radius: 0;
-        box-sizing: border-box;
     }
 
     #rightContainer {
@@ -81,13 +38,10 @@
         font-size: 0.9rem;
         background-color: #FEFEE3;
         border-radius: 0;
-        box-sizing: border-box;
     }
 
-    /* STORY BUTTONS */
     #storyButton {
         display: flex;
-        flex-direction: row;
         flex-wrap: wrap;
         gap: 5px;
         justify-content: center;
@@ -100,16 +54,13 @@
         min-width: 60px;
         padding: 6px;
         font-size: 0.9rem;
-        box-sizing: border-box;
     }
 
-    /* FORM INPUTS */
     #storyForm input {
         width: 100%;
         padding: 6px;
         font-size: 0.9rem;
         margin-bottom: 6px;
-        box-sizing: border-box;
     }
 
     #revealBtn,
@@ -118,15 +69,12 @@
         padding: 8px;
         font-size: 0.95rem;
         margin-top: 6px;
-        box-sizing: border-box;
     }
 
-    /* IMAGES */
-    #imageFiller { height: 75px; width: auto; margin: 4px auto; }
-    #rightImage { height: 35px; width: auto; margin: 4px auto; }
-    .storyIcon { height: 60px; width: auto; margin: 4px auto; }
+    #imageFiller { height: 75px; margin: 4px auto; }
+    #rightImage { height: 35px; margin: 4px auto; }
+    .storyIcon { height: 60px; margin: 4px auto; }
 
-    /* FOOTER */
     #footer {
         width: 95%;
         padding: 8px;
@@ -136,8 +84,6 @@
         text-align: center;
         background-color: rgba(44,110,73,0.95);
         color: #FEFEE3;
-        position: relative;
-        z-index: 1;
     }
 
     #footerCenter {
