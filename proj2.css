@@ -2,7 +2,6 @@
 #header {
     transition: background-color 1.5s ease, box-shadow 1.5s ease, transform 1.5s ease;
 }
-
 #header:hover {
     background-color: #3a8d5b; 
     transform: translateY(-3px); 
